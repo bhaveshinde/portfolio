@@ -171,6 +171,28 @@
     max-width:720px;
   }
 
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.3fr 0.8fr;
+    gap:48px;
+    align-items:center;
+  }
+  @media (max-width:900px){
+    .hero-grid{ grid-template-columns:1fr; gap:40px; }
+    .hero-photo{ order:-1; max-width:280px; }
+  }
+
+  .hero-photo{
+    justify-self:center;
+    width:100%;
+    max-width:380px;
+  }
+  .hero-photo img{
+    width:100%;
+    height:auto;
+    display:block;
+  }
+
   .eyebrow-line{
     font-size:14.5px;
     color:var(--accent);
@@ -600,15 +622,20 @@
 
 <section class="hero">
   <div class="wrap">
-    <div class="hero-inner">
-      <div class="eyebrow-line">Hello, I'm</div>
-      <h1>Bhavesh Shinde</h1>
-      <h2 class="role">And I build machine learning systems that can explain their own reasoning.</h2>
-      <p class="lede">MSc Artificial Intelligence student based in London, originally from Mumbai. I like problems where you have to be honest about what your data can and can't tell you — not just chase a leaderboard number.</p>
-      <p class="lede">My work spans <strong>NLP, explainable AI, and applied statistics</strong>: building full pipelines end to end, from sourcing and balancing imbalanced data through to validating results with bootstrap confidence intervals rather than a single point estimate.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#work">See my work</a>
-        <a class="btn btn-secondary" href="#contact">Get in touch</a>
+    <div class="hero-grid">
+      <div class="hero-inner">
+        <div class="eyebrow-line">Hello, I'm</div>
+        <h1>Bhavesh Shinde</h1>
+        <h2 class="role">And I build machine learning systems that can explain their own reasoning.</h2>
+        <p class="lede">MSc Artificial Intelligence student based in London, originally from Mumbai. I like problems where you have to be honest about what your data can and can't tell you — not just chase a leaderboard number.</p>
+        <p class="lede">My work spans <strong>NLP, explainable AI, and applied statistics</strong>: building full pipelines end to end, from sourcing and balancing imbalanced data through to validating results with bootstrap confidence intervals rather than a single point estimate.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#work">See my work</a>
+          <a class="btn btn-secondary" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/profile.png" alt="Bhavesh Shinde" width="900" height="1068">
       </div>
     </div>
   </div>
